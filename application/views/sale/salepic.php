@@ -438,8 +438,8 @@ foreach ($Getpermission_rule as $value) {
 									<tbody>
 
 										<tr ng-repeat="x in listsale" style="background-color:#eee;font-size:18px;">
-
-											<td style="text-align:left;">
+											<!-- origin -->
+											<!-- <td style="text-align:left;">
 
 												<?php if (!isset($arr) || $arr[23]->status == true) { ?>
 													<input type="text" onkeypress="validate(event)" ng-model="x.product_sale_num" ng-change="Updateproductnumber(x,$index)" style="width:50px;text-align:center;float:left;">
@@ -456,11 +456,17 @@ foreach ($Getpermission_rule as $value) {
 												<button ng-repeat="y in getpotall2data" ng-if="y.product_id==x.product_id" ng-click="Getpotmodal(x,$index)" class="btn btn btn-default">
 													<span class="glyphicon glyphicon-plus"></span>
 												</button>
+											</td> -->
 
+											<!-- origin -->
 
+											<!-- update new  -->
+											<td style="text-align:left;" class="ng-binding">
+
+												<input type="text" onkeypress="validate(event)" ng-model="x.product_sale_num" ng-change="Updateproductnumber(x,$index)" style="width:50px;text-align:center;float:left;" class="ng-pristine ng-valid ng-touched">
 
 											</td>
-
+											<!-- update new  -->
 
 
 											<!-- <td>
@@ -4469,7 +4475,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 
 
-             
+
 
 
 														$scope.getpaytype = function() {
@@ -4486,7 +4492,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 														$scope.is_enter = true;
 
 														// add new lang_sp_97 ================
-													
+
 														// $(window).keydown(function(event) {
 														// 	if (event.keyCode == 32) {
 														// 		$scope.Addnumbermoney('c2m');
@@ -4509,7 +4515,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																$scope.product_code = '';
 
 																// $scope.Opengetmoneymodal();
-															
+
 
 
 															}
@@ -6001,11 +6007,50 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 
 
+														// origin =====================
+
+														// $scope.Updateproductnumber = function(x, index) {
+														// 	$scope.listsaleindex = index;
+														// 	$http.post("Salepic/updateproductprice", {
+														// 		product_id: x.product_id,
+														// 		product_code: x.product_code,
+														// 		product_name: x.product_name,
+														// 		product_image: x.product_image,
+														// 		product_unit_name: x.product_unit_name,
+														// 		product_des: x.product_des,
+														// 		product_score: x.product_score,
+														// 		product_price: x.product_price,
+														// 		product_sale_num: x.product_sale_num,
+														// 		product_price_discount: x.product_price_discount,
+														// 		product_price_discount_percent: x.product_price_discount_percent
+														// 	}).success(function(data) {
+
+														// 		$scope.Discount_lastfunc();
+														// 		$scope.Discount_lastfunc2();
+
+														// 		$scope.Summarysale_change();
+
+														// 		$scope.listsale[$scope.listsaleindex].product_price = data.list[$scope.listsaleindex].product_price;
 
 
+														// 		if (data.cansale == '0') {
+														// 			$scope.listsale = data.list;
+														// 			toastr.warning('<?php echo $lang_sp_126; ?>');
+														// 		}
+
+														// 		console.log($scope.listsale);
+														// 		//toastr.success('บันทึกจำนวน ' + x.product_sale_num + ' เรียบร้อย');
+														// 		$scope.Getnumtoprice_2(x.product_code);
+														// 	});
+														// }
+
+															// origin =====================
+
+
+														// ================ add test =================================================================
 														$scope.Updateproductnumber = function(x, index) {
 															$scope.listsaleindex = index;
-															$http.post("Salepic/updateproductprice", {
+															$http.post("Salepic/updateproductnumber", {
 																product_id: x.product_id,
 																product_code: x.product_code,
 																product_name: x.product_name,
@@ -6028,7 +6073,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 																if (data.cansale == '0') {
 																	$scope.listsale = data.list;
-																	toastr.warning('<?php echo $lang_sp_126; ?>');
+																	toastr.warning('ບໍ່ສາມາດສ້າງການຂາຍໄດ້ ເນື່ອງຈາກຕັ້ງຄ່າບໍ່ໃຫ້ຂາຍຖ້າສະຕັອກເຫຼືອນ້ອຍກວ່າທີ່ກຳໜົດ');
 																}
 
 
@@ -6036,6 +6081,9 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																$scope.Getnumtoprice_2(x.product_code);
 															});
 														}
+
+
+														//  add test ======================
 
 
 
