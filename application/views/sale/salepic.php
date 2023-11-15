@@ -6044,7 +6044,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 														// 	});
 														// }
 
-															// origin =====================
+														// origin =====================
 
 
 														// ================ add test =================================================================
@@ -6082,13 +6082,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															});
 														}
 
-
 														//  add test ======================
-
-
-
-
-
 														$scope.Updateproductprice = function(x) {
 															$http.post("Salepic/updateproductprice", {
 																product_id: x.product_id,
