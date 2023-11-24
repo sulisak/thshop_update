@@ -461,33 +461,37 @@ $scope.user_name = x.user_name;
 
 
 
-
+// list sale reportshift by product list ==========
 $http.post("Salereportshift/Openbillclosedaylist_product",{
 shift_id: x.shift_id,
 }).success(function(data){
 
 	 $scope.openbillclosedaylist_product = data;
+		// console.log(data);
 
 			});
-
-
+// list sale reportshift by product list with wh_product_category ==========
 
 	$http.post("Salereportshift/Openbillclosedaylista",{
 	shift_id: x.shift_id,
 	}).success(function(data){
 
      $scope.openbillclosedaylista = data;
+					// console.log(data);
 
         });
+// end list sale reportshift by product list with wh_product_category ==========
 
+// sale header report shift =========
 	$http.post("Salereportshift/Openbillclosedaylistb",{
 	shift_id: x.shift_id,
 	}).success(function(data){
 
      $scope.openbillclosedaylistb = data;
+					console.log(data);
 
         });
-
+// end sale header report shift =========
 
 	$http.post("Salereportshift/Openbillclosedaylistc",{
 	shift_id: x.shift_id,

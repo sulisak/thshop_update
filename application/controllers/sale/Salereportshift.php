@@ -1,20 +1,20 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Salereportshift extends MY_Controller {
+class Salereportshift extends MY_Controller
+{
 
 
- public function __construct()
-    {
-        parent::__construct();
-        $this->load->database();
-        $this->load->model('sale/salereportshift_model');
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->database();
+		$this->load->model('sale/salereportshift_model');
 
-     if(!isset($_SESSION['owner_id'])){
-            header( "location: ".$this->base_url );
-        }
-
-    }
+		if (!isset($_SESSION['owner_id'])) {
+			header("location: " . $this->base_url);
+		}
+	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -34,62 +34,57 @@ class Salereportshift extends MY_Controller {
 	{
 
 
-$data['tab'] = 'salereportshift';
-$data['title'] = 'Sale Shift List';
-		$this->salelayout('sale/salereportshift',$data);
+		$data['tab'] = 'salereportshift';
+		$data['title'] = 'Sale Shift List';
+		$this->salelayout('sale/salereportshift', $data);
+	}
+
+
+
+
+	function Get()
+	{
+
+		$data = json_decode(file_get_contents("php://input"), true);
+		echo  $this->salereportshift_model->Get($data);
+	}
+
+
+	// show list sale reportshift by product list ==========
+	function Openbillclosedaylist_product()
+	{
+
+		$data = json_decode(file_get_contents("php://input"), true);
+		echo  $this->salereportshift_model->Openbillclosedaylist_product($data);
+
+		// print_r($data);
+
+	}
+	// show list sale reportshift by product list ==========
+
+	
+	function Openbillclosedaylista()
+	{
+
+		$data = json_decode(file_get_contents("php://input"), true);
+		echo  $this->salereportshift_model->Openbillclosedaylista($data);
+	}
+
+
+
+	// reportsaleby shift header =========
+	function Openbillclosedaylistb()
+	{
+
+		$data = json_decode(file_get_contents("php://input"), true);
+		echo  $this->salereportshift_model->Openbillclosedaylistb($data);
+	}
+	// reportsaleby shift header =========
+
+	function Openbillclosedaylistc()
+	{
+
+		$data = json_decode(file_get_contents("php://input"), true);
+		echo  $this->salereportshift_model->Openbillclosedaylistc($data);
+	}
 }
-
-
-
-
-function Get()
-    {
-
-$data = json_decode(file_get_contents("php://input"),true);
-echo  $this->salereportshift_model->Get($data);
-
-	}
-	
-	
-	
-	 function Openbillclosedaylist_product()
-        {
-
-      $data = json_decode(file_get_contents("php://input"),true);
-      echo  $this->salereportshift_model->Openbillclosedaylist_product($data);
-
-      }
-
-
-
-    	function Openbillclosedaylista()
-        {
-
-    $data = json_decode(file_get_contents("php://input"),true);
-    echo  $this->salereportshift_model->Openbillclosedaylista($data);
-
-    	}
-
-    	function Openbillclosedaylistb()
-        {
-
-    $data = json_decode(file_get_contents("php://input"),true);
-    echo  $this->salereportshift_model->Openbillclosedaylistb($data);
-
-    	}
-
-    	function Openbillclosedaylistc()
-        {
-
-    $data = json_decode(file_get_contents("php://input"),true);
-    echo  $this->salereportshift_model->Openbillclosedaylistc($data);
-
-    	}
-
-
-
-
-
-
-
-	}
