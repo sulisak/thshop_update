@@ -2680,7 +2680,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 												<tr ng-repeat="x in openbillclosedaylistb">
 													<td width="200px;">
-														<?php echo $lang_sp_80; ?></td>
+													ຍອດຂາຍ</td>
 													<td align="right">{{x.sumsale_price2 | number}}</td>
 												</tr>
 

@@ -43,7 +43,7 @@
 		<tr class="trheader">
 
 			<th style="text-align: center;"><?=$lang_saletotal?></th>
-			<th style="text-align: center;"><?php echo $lang_rpsm_2;?></th>
+			<th style="text-align: center;">ຍອດຂາຍ</th>
 			<th style="text-align: center;"><?=$lang_discountlast?></th>
 			<th style="text-align: center;"><?php echo $lang_rpsm_3;?></th>
 			<th style="text-align: center;"><?php echo $lang_rpsm_4;?></th>
