@@ -582,6 +582,6 @@ $data['listsale'][$i-1]['ID'] = null;
 
   }
 
-  	}
+}
 
-	}
+}
