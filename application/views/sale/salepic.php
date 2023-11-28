@@ -68,10 +68,6 @@ foreach ($Getpermission_rule as $value) {
 					</div>
 				<?php } ?>
 
-
-
-
-
 				<form class="form-inline" style="float: right;">
 
 
@@ -133,20 +129,12 @@ foreach ($Getpermission_rule as $value) {
 
 				</form>
 
-
-
 				</form>
 
 				<input type="hidden" name="" ng-model="customer_id">
 
 
-
-
 			</div>
-
-
-
-
 
 			<div style="height: 760px;overflow: auto;">
 
@@ -237,16 +225,12 @@ foreach ($Getpermission_rule as $value) {
 
 					</div>
 
-
-
 				</div>
 
 
 				<!-- <center>
 <img ng-if="!productlist || !productlistkey" src="<?php echo $base_url; ?>/pic/loading.gif">
 </center> -->
-
-
 
 				<div class="col-sm-3 col-md-2">
 					<div ng-click="Addproductrank()" class="panel-body  panel panel-default product_box" style="height: 90px;cursor: pointer;background-color: #eee;">
@@ -263,7 +247,6 @@ foreach ($Getpermission_rule as $value) {
 
 					<div ng-show="productlist.length != '0'" ng-click="Delproductrank()" class="panel-body  panel panel-default product_box" style="height: 90px;cursor: pointer;background-color: #eee;">
 
-
 						<center>
 							<?php echo $lang_sp_5; ?><br />
 							<span class="glyphicon glyphicon-remove" aria-hidden="true" style="font-size: 40px;"></span>
@@ -272,20 +255,9 @@ foreach ($Getpermission_rule as $value) {
 
 					</div>
 
-
-
 				</div>
 
-
-
-
 			</div>
-
-
-
-
-
-
 
 			</div>
 
@@ -317,9 +289,6 @@ foreach ($Getpermission_rule as $value) {
 										<?php } ?>
 									</div>
 
-
-
-
 									<form class="form-inline">
 										<div class="form-group">
 											<input type="text" id="product_code_id" class="form-control" ng-model="product_code" style="text-align: right;height: 47px;background-color:#dff0d8;font-size: 16px;width:150px;" placeholder="<?= $lang_barcode ?>" autofocus>
@@ -341,9 +310,6 @@ foreach ($Getpermission_rule as $value) {
 
 						</tbody>
 					</table>
-
-
-
 
 					<div class="panel panel-default">
 						<div class="panel-body">
@@ -374,8 +340,6 @@ foreach ($Getpermission_rule as $value) {
 										</select>
 									</div>
 
-
-
 									<div class="form-group">
 										<select class="form-control" ng-model="pay_type" style="background-color:orange;color:#fff;">
 											<option ng-repeat="x in pay_type_list" value="{{x.pay_type_id}}">
@@ -383,10 +347,6 @@ foreach ($Getpermission_rule as $value) {
 											</option>
 										</select>
 									</div>
-
-
-
-
 
 									<?php if (isset($_GET['mode'])) { ?>
 										<a href="?" type="button" class="btn btn-default btn-sm">
@@ -400,22 +360,11 @@ foreach ($Getpermission_rule as $value) {
 										</a>
 									<?php } ?>
 
-
-
-
 								</form>
-
-
 
 							</center>
 
-
-
 							<div id="salebox" style="height: 300px;overflow: auto;">
-
-
-
-
 
 								<div ng-if="listsale==''" style="height:100px;text-align:center;"><br /><br />
 									<?php echo $lang_sp_12; ?></div>
@@ -487,10 +436,6 @@ foreach ($Getpermission_rule as $value) {
 													({{x.product_price}})
 												<?php } ?>
 
-
-
-
-
 												<?php if (!isset($arr) ||  $arr[21]->status == true) { ?>
 													<br />
 													<span style="font-size:10px;"><?php echo $lang_sp_13; ?></span>
@@ -508,20 +453,9 @@ foreach ($Getpermission_rule as $value) {
 													<input type="text" onkeypress="validate(event)" ng-model="x.product_price_discount" style="width:50px;height: 20px;font-size: 14px;">
 												<?php } ?>
 
-
-
-
-
-
 												<input type="hidden" ng-model="x.product_id">
 
 											</td>
-
-
-
-
-
-
 
 											<td align="right">{{(x.product_price - x.product_price_discount) * x.product_sale_num | number:0 }}</td>
 
@@ -549,10 +483,6 @@ foreach ($Getpermission_rule as $value) {
 
 											</td>
 										</tr>
-
-
-
-
 
 										<tr style="font-size:20px;">
 											<td colspan="1" align="right"><?= $lang_all ?></td>
@@ -678,9 +608,6 @@ foreach ($Getpermission_rule as $value) {
 								</tbody>
 							</table>
 
-
-
-
 							<table class="table">
 
 								<tbody>
@@ -695,24 +622,17 @@ foreach ($Getpermission_rule as $value) {
 
 									<tr>
 
-
-
 										<td align="right" style="width:100%;">
 
 											<button ng-click="Opengetmoneymodal()" class="btn btn-lg btn-primary" style="width:100%;font-size:40px;height: 90px;">
 												<?= $lang_getmoneyx ?>(SpaceBar)
 											</button>
 
-
-
 										</td>
 									</tr>
 
 								</tbody>
 							</table>
-
-
-
 
 							<div class="modal fade" id="Addproductrankmodal">
 								<div class="modal-dialog">
@@ -752,16 +672,6 @@ foreach ($Getpermission_rule as $value) {
 									</div>
 								</div>
 							</div>
-
-
-
-
-
-
-
-
-
-
 
 							<div class="modal fade" id="Showproduct_pointmodal">
 								<div class="modal-dialog">
@@ -805,16 +715,6 @@ foreach ($Getpermission_rule as $value) {
 								</div>
 							</div>
 
-
-
-
-
-
-
-
-
-
-
 							<div class="modal fade" id="Deletelist_modal">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -855,15 +755,6 @@ foreach ($Getpermission_rule as $value) {
 									</div>
 								</div>
 							</div>
-
-
-
-
-
-
-
-
-
 
 							<div class="modal fade" id="Showquotationlistmodal">
 								<div class="modal-dialog modal-lg">
@@ -981,11 +872,6 @@ foreach ($Getpermission_rule as $value) {
 								</div>
 							</div>
 
-
-
-
-
-
 							<div class="modal fade" id="Delproductrankmodal">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -1022,18 +908,10 @@ foreach ($Getpermission_rule as $value) {
 								</div>
 							</div>
 
-
-
-
-
 							<div class="modal fade" id="Openfull">
 								<div class="modal-dialog modal-lg" style="width: 100%;margin: 0px;">
 									<div class="modal-content">
 										<div class="modal-body">
-
-
-
-
 
 											<table width="100%">
 												<tbody>
@@ -1169,14 +1047,11 @@ foreach ($Getpermission_rule as $value) {
 											<table class="table table-hover" width="100%">
 												<tbody>
 
-
 													<tr style="font-size: 20px;">
 														<td width="25%" align="right"><?= $lang_getmoney ?>:</td>
 														<td>
 															<form>
 																<input type="text" id="money_from_customer2" class="form-control" ng-model="money_from_customer" placeholder="<?= $lang_moneyfromcus ?>" style="font-size: 20px;text-align: right;height: 47px;background-color:#dff0d8;">
-
-
 
 														</td>
 														<td width="35%"> <?= $lang_moneychange ?>: <b>{{money_from_customer - Sumsalepricevat() | number}} <?= $lang_currency ?></b></td>
@@ -1186,19 +1061,11 @@ foreach ($Getpermission_rule as $value) {
 													</tr>
 												</tbody>
 											</table>
-
-
-
-
-
 										</div>
 
 									</div>
 								</div>
 							</div>
-
-
-
 
 							<div class="modal fade" id="Openchangemoney">
 								<div class="modal-dialog modal-lg">
@@ -1248,37 +1115,16 @@ foreach ($Getpermission_rule as $value) {
 
 											<button type="button" class="btn btn-danger btn-lg" ng-click="clickokafterpay()">Close(Esc)</button>
 
-
-
 										</div>
 
 									</div>
 								</div>
 							</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
 							<hr />
-
-
 
 						</div>
 					</div>
-
-
-
-
-
 
 					<div class="modal fade" id="Opencustomer">
 						<div class="modal-dialog modal-lg">
@@ -1377,18 +1223,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 					</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
 					<div class="modal fade" id="Allcuscourse">
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
@@ -1451,12 +1285,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 					</div>
 
-
-
-
-
-
-
 					<div class="modal fade" id="Modalproduct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 						<div class="modal-dialog">
 							<div class="modal-content">
@@ -1497,12 +1325,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
 
 					<div class="modal fade" id="Openone">
 						<div class="modal-dialog modal-lg">
@@ -1622,14 +1444,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 		{{sumsalevat | number}}</td>
 		</tr> -->
 
-
-
-
-
-
-
-
-
 											<?php
 											if ($_SESSION['owner_vat_status'] == '2') {
 											?>
@@ -1688,10 +1502,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 												<td style="font-weight: bold;" align="right">{{Sum_product_weight_bill() | number}} kg</td>
 											</tr>
 
-
-
-
-
 											<tr ng-if="pay_type=='4'">
 												<td align="right" colspan="7">
 													<span ng-if="pay_type=='4'"><?php echo $lang_sp_62; ?></span>
@@ -1703,7 +1513,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 												<td style="font-weight: bold;" align="right">{{money_from_customer3-(sumsalevat-discount_last2) | number:<?php echo $_SESSION['decimal_print']; ?>}}</td>
 
 											</tr>
-
 
 											<?php
 											if ($_SESSION['open_vat_on_slip'] == '1') {
@@ -1723,18 +1532,12 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 													</td>
 												</tr>
 
-
-
 											<?php
 											}
 											?>
 
-
-
 										</tbody>
 									</table>
-
-
 
 									<?php
 									if ($_SESSION['exchangerateonslip'] == '1') {
@@ -1751,10 +1554,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 										</table>
 									<?php } ?>
-
-
-
-
 
 									<table style="width: 100%">
 
@@ -1804,21 +1603,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 					<div class="modal fade" id="Openonequotation">
 						<div class="modal-dialog modal-lg">
@@ -1905,9 +1689,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											<td style="font-weight: bold;" align="right">{{Sum_product_weight_bill() | number}} kg</td>
 										</tr>
 
-
 									</table>
-
 
 									<center>
 										--------------------
@@ -1915,18 +1697,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 										<?php echo $lang_sp_67; ?> <?php echo date('d-m-Y H:i:s'); ?>
 									</center>
 
-
-
-
 								</div>
-
-
-
-
-
-
-
-
 
 								<div class="modal-body" ng-if="quo_type=='1'" id="openprint2">
 									<center>
@@ -2042,10 +1813,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 		{{sumsalevat | number}}</td>
 		</tr> -->
 
-
-
-
-
 											<?php
 											if ($_SESSION['owner_vat_status'] == '1') {
 											?>
@@ -2055,9 +1822,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 														{{((sumsalevat*100)/<?php echo $_SESSION['owner_vat'] + 100; ?>)*(<?php echo $_SESSION['owner_vat']; ?>/100) | number}}
 													</td>
 												</tr>
-
-
-
 
 												<tr ng-if="vat3=='0'">
 													<td align="right" colspan="7"><?= $lang_pricebeforvat ?></td>
@@ -2081,9 +1845,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 													</td>
 												</tr>
 
-
-
-
 												<tr ng-if="vat3!='0'">
 													<td align="right" colspan="7"><?= $lang_pricebeforvat ?></td>
 													<td style="font-weight: bold;" align="right">
@@ -2098,13 +1859,9 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 													</td>
 												</tr>
 
-
-
 											<?php
 											}
 											?>
-
-
 
 											<?php
 											if ($_SESSION['owner_vat_status'] == '2') {
@@ -2116,9 +1873,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 													</td>
 												</tr>
 
-
-
-
 												<tr ng-if="vat3!='0'">
 													<td align="right" colspan="7"><?= $lang_pricebeforvat ?></td>
 													<td style="font-weight: bold;" align="right">
@@ -2136,9 +1890,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											<?php
 											}
 											?>
-
-
-
 
 											<tr ng-if="discount_last2 !='0.00'">
 												<td align="right" colspan="7"><?= $lang_discount ?></td>
@@ -2187,9 +1938,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 										</tbody>
 									</table>
 
-
-
-
 									<table style="width: 100%" ng-if="quotation_type=='2'">
 
 										<tbody>
@@ -2218,14 +1966,9 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 										</tbody>
 									</table>
 
-
-
 									<?php echo $_SESSION['footer_a4']; ?>
 
-
-
 								</div>
-
 
 								<div class="modal-footer">
 
@@ -2233,21 +1976,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 					<div class="modal fade" id="getpotmodal">
 						<div class="modal-dialog">
@@ -2275,7 +2003,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 										</b>
 										<br />
 
-
 										<span ng-if="x.type=='0'"><?php echo $lang_sp_75; ?></span>
 										<span ng-if="x.type=='1'">%</span>
 										<span ng-if="x.type=='2'"><?php echo $lang_sp_76; ?></span>
@@ -2283,13 +2010,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 										<br />
 										<button class="btn btn-lg btn-success" ng-click="Selectpot(x)"><?= $lang_select ?></button>
 									</div>
-
-
-
-
-
-
-
 
 									</center>
 
@@ -2300,18 +2020,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 					<div class="modal fade" id="Openonesend">
 						<div class="modal-dialog modal-lg">
@@ -2327,9 +2035,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 								</select>
 								<button class="btn btn-primary" ng-click="printDiv()"><?= $lang_print ?></button>
 								<div class="modal-body" id="section-to-print2">
-
-
-
 
 									<table ng-if="lung=='2'" class="table table-bordered" width="100%">
 										<tr>
@@ -2357,9 +2062,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											</td>
 										</tr>
 									</table>
-
-
-
 
 									<table ng-if="lung=='1'" class="table table-bordered" width="100%">
 										<tr>
@@ -2398,8 +2100,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 									</center>
 
-
-
 								</div>
 
 
@@ -2412,30 +2112,10 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 					</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 					<div class="modal fade" id="Openshiftmodal">
 						<div class="modal-dialog modal-sm">
 							<div class="modal-content">
-
-
 								<div class="modal-body">
-
-
-
 
 									<center>
 										<?php if ($_SESSION['user_type'] > '0') { ?>
@@ -2470,11 +2150,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 										} ?>
 									</center>
 
-
-
-
-
-
 								</div>
 
 
@@ -2494,12 +2169,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 					</div>
 
-
-
-
-
-
-
 					<div class="modal fade" id="Closeshiftnow">
 						<div class="modal-dialog modal-sm">
 							<div class="modal-content">
@@ -2515,9 +2184,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											<?= $lang_confirmcloseshif ?>
 										</button>
 
-
-
-
 										<hr />
 
 										<input type="checkbox" ng-model="addmoneytoshift">
@@ -2532,13 +2198,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											<input type="submit" class="btn btn-success btn-lg" value="<?php echo $lang_add; ?>">
 										</form>
 
-
 									</center>
-
-
-
-
-
 
 								</div>
 
@@ -2561,18 +2221,10 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 									</center>
 
-
-
 								</div>
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
 
 
 					<div class="modal fade" id="Openbillcloseday">
@@ -2583,7 +2235,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 									<button class="btn btn-primary" onClick="Openprintdiv_table()"><?= $lang_print ?></button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
 
 								</div>
 
@@ -2598,9 +2249,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 
 									<div id="section-to-print" style="font-size: 14px;background-color: #fff;">
-
-
-
 
 										<center style="font-size: 25px;">
 											<b><span style="font-size: 25px;"> <?php echo $_SESSION['owner_name']; ?></span> </b>
@@ -2708,7 +2356,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											</tbody>
 										</table>
 
-
 										<table class="table table-bordered">
 
 											<tbody>
@@ -2718,8 +2365,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 														<div ng-repeat="y in pay_type_list">
 															<span ng-if="x.pay_type==y.pay_type_id">{{y.pay_type_name}}</span>
 														</div>
-
-
 
 													</td>
 
@@ -2743,15 +2388,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											</tbody>
 										</table>
 
-
-
-
-
-
-
-
-
-
 										<table class="table table-bordered">
 											<tr>
 												<td width="200px;" style="text-align: left;"><?= $lang_sales ?> </td>
@@ -2767,13 +2403,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											: <?php echo date('d-m-Y H:i:s'); ?>
 										</center>
 
-
-
-
-
-
-
-
 									</div>
 
 								</div>
@@ -2783,18 +2412,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 					<div style="position: absolute; opacity: 0.0;">
 
@@ -2808,9 +2425,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 											</div>
 
-
 										</form>
-
 
 										<div id="section-to-print-billclose" style="width: <?php echo $pt_width; ?>;font-size: 25px;text-align: left;background-color: #fff;overflow:visible !important;">
 
@@ -2856,7 +2471,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											</div>
 											<br />
 											____________________________________________
-
 
 											<table style="width: 100%;">
 
@@ -2948,17 +2562,11 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 											____________________________________________
 
-
-
 										</div>
 
 									</div>
 									<div class="modal-footer">
 										<button type="button" ng-if="printer_ul =='0'" class="btn btn-primary" ng-click="printDiv2()"><?= $lang_print ?></button>
-
-
-
-
 										<button type="button" class="btn btn-default" data-dismiss="modal"><?= $lang_close ?></button>
 									</div>
 								</div>
@@ -2966,16 +2574,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 
 					</div>
-
-
-
-
-
-
-
-
-
-
 
 					<div class="modal fade" id="Openonemini" style="visibility: hidden;">
 						<div class="modal-dialog modal-sm">
@@ -2988,7 +2586,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 								<div class="modal-body">
 									<div id="section-to-print-mini" style="font-size: 12px;">
 										<center>
-
 
 											<?php
 											if ($_SESSION['open_number_for_cus'] == '1') {
@@ -3005,8 +2602,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											}
 											?>
 
-
-
 											<?php
 											if ($_SESSION['logoonslip'] == '0') {
 											?>
@@ -3022,8 +2617,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											<?php
 											}
 											?>
-
-
 
 											<?php if ($_SESSION['showstorename'] == '1') { ?>
 												<b><span style="font-size: 16px;"> <?php echo $_SESSION['owner_name']; ?></span> </b>
@@ -3107,13 +2700,8 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 												<?php } ?>
 
 											</span>
-
-
 											___________________________
 											<br />
-
-
-
 
 											<?= $lang_productservice ?>
 
@@ -3156,13 +2744,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 													<td align="right">{{sumsale_price | number:<?php echo $_SESSION['decimal_print']; ?>}}</td>
 												</tr>
-
-
-
-
-
-
-
 
 												<tr ng-if="discount_last2!='0.00'">
 
@@ -3216,8 +2797,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											</table>
 										<?php } ?>
 
-
-
 										<?php
 										if ($_SESSION['open_vat_on_slip'] == '1') {
 										?>
@@ -3244,10 +2823,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											</table>
 										<?php } ?>
 
-
-
-
-
 										<center>
 											___________________________
 										</center>
@@ -3258,10 +2833,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 											</tr>
 
-
-
 										</table>
-
 
 										<center>
 											___________________________
@@ -3272,8 +2844,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 												<br />
 											<?php } ?>
 
-
-
 											<?php if ($_SESSION['showadddate'] == '1') { ?>
 												<?= $lang_day ?>: {{adddate}}
 												<!-- <br />
@@ -3281,9 +2851,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 												<br />
 
 											<?php } ?>
-
-
-
 
 											<?= $_SESSION['footer_slip'] ?>
 
@@ -3297,9 +2864,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 												<img src="<?php echo $base_url . '/' . $_SESSION['picunderslip']; ?>">
 											<?php } ?>
 
-
-
-
 											<center>
 
 
@@ -3307,13 +2871,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 													<br />
 													{{saleremark}}
 												</span>
-
-
-
-
-
-
-
 
 
 									</div>
@@ -3329,17 +2886,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 					</div>
 
-
-
-
-
-
-
-
-
-
-
-
 					<div class="modal fade" id="Openonemini_order" style="visibility: hidden;">
 						<div class="modal-dialog modal-sm">
 							<div class="modal-content">
@@ -3351,8 +2897,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 								<div class="modal-body">
 									<div id="section-to-print-mini-order" style="font-size: 12px;">
 										<center>
-
-
 
 											<?php if ($_SESSION['show_order_on_slip'] == '1') { ?>
 												<center>
@@ -3375,7 +2919,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 													<?php
 													}
 													?>
-
 
 												</center>
 
@@ -3403,27 +2946,13 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 													<br />
 													------------
 
-
-
 													<span ng-show="showremarkonslip=='1'">
 														<br />
 														{{saleremark}}
 													</span>
 												</center>
 
-
-
-
-
-
 											<?php } ?>
-
-
-
-
-
-
-
 
 									</div>
 
@@ -3438,19 +2967,11 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 					</div>
 
-
-
-
-
-
-
 					<div class="modal fade" id="Opengetmoneymodal">
 						<div class="modal-dialog">
 							<div class="modal-content">
 
 								<div class="modal-body" style="height:550px;">
-
-
 									<center>
 
 										<div class="form-group">
@@ -3565,24 +3086,15 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											<br /><br />
 										</div>
 
-
-
 										<button class="col-xs-12 col-sm-12 col-md-12 btn btn-info" style="font-size:40px;font-weight:bold;height: 70px;" ng-click="Morepay()">
 											<?php echo $lang_sp_102; ?>
 										</button>
-
-
-
 
 										<div class="col-xs-12 col-sm-12 col-md-12">
 											<br /><br />
 										</div>
 
-
-
 									</center>
-
-
 
 								</div>
 								<div class="modal-footer">
@@ -3595,11 +3107,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
 
 					<div class="modal fade" id="popup_nummodal">
 						<div class="modal-dialog">
@@ -3638,11 +3145,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
 
 					<div class="modal fade" id="morepay">
 						<div class="modal-dialog modal-sm">
@@ -3719,12 +3221,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 					</div>
 
-
-
-
-
-
-
 					<div class="modal fade" id="Seemorepay">
 						<div class="modal-dialog modal-sm">
 							<div class="modal-content">
@@ -3752,12 +3248,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
 
 					<div class="modal fade" id="popup_pricemodal">
 						<div class="modal-dialog">
@@ -3796,10 +3286,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 					</div>
 
 
-
-
-
-
 					<div class="modal fade" id="Modalcannotfindproduct">
 						<div class="modal-dialog">
 							<div class="modal-content">
@@ -3828,17 +3314,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 					<div class="modal fade" id="Deleteorder_pass">
@@ -3878,27 +3353,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 					</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 					<div class="modal fade" id="Modalgetnumtoprice_noti">
 						<div class="modal-dialog">
 							<div class="modal-content">
@@ -3927,20 +3381,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 					<div style="position: absolute; opacity: 0.0;">
 						<div class="modal fade" id="Openoneminiip">
@@ -4043,7 +3483,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 													</td>
 												</tr>
 
-
 												<tr ng-if="vat3 > '0'">
 													<td style="text-align: left;"><?= $lang_pricesumvat ?></td>
 													<td></td>
@@ -4051,9 +3490,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 														{{sumsalevat | number}}
 													</td>
 												</tr>
-
-
-
 
 												<?php
 												if ($_SESSION['owner_vat_status'] != '0') {
@@ -4124,8 +3560,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 											<br />
 											__________________________________________
 
-
-
 										</div>
 
 									</div>
@@ -4140,16 +3574,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 						</div>
 
 					</div>
-
-
-
-
-
-
-
 					</div>
-
-
 
 					<?php if ($_SESSION['user_type'] != '0') { ?>
 						<div class="col-xs-12 col-sm-12 col-md-12">
@@ -4213,10 +3638,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 																<?= $lang_lastsale ?>
 
-
-
-
-
 															<?php
 														}
 															?>
@@ -4228,27 +3649,13 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																	<hr />
 																</div>
 
-
-
-
 															<?php
 															}
 															?>
 
-
-
-
-
-
 															<!-- ============== update show list sale last and show delete button in salepic ======================-->
 
-
-
-
-
 															<form class="form-inline">
-
-
 																<div class="form-group">
 																	<input type="text" ng-model="searchtext" ng-change="getlist(searchtext,'1')" class="form-control" style="width:300px;" placeholder="<?= $lang_search ?> Runno, <?= $lang_cusname ?>">
 																</div>
@@ -4263,9 +3670,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															</form>
 															<br />
 
-
-
-
 															<table class="table table-hover table-bordered">
 																<thead>
 																	<tr class="trheader">
@@ -4275,11 +3679,8 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 																		<th><?php echo $lang_sp_119; ?></th>
 
-
-
 																		<th><?= $lang_productnum ?></th>
 																		<th><?= $lang_pricesum ?></th>
-
 
 																		<?php
 																		if ($_SESSION['owner_vat_status'] == '2') {
@@ -4289,7 +3690,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																		<?php
 																		}
 																		?>
-
 
 																		<th><?= $lang_discountlast ?></th>
 																		<th><?= $lang_sumall ?></th>
@@ -4308,7 +3708,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																		<td ng-show="selectpage!='1'" class="text-center">{{($index+1)+(perpage*(selectpage-1))}}</td>
 																		<td>
 
-
 																			<button ng-show="printer_ul =='0'" class="btn btn-primary btn-sm" ng-click="printDivmini2(x)">
 																				<?= $lang_print ?></button>
 
@@ -4316,7 +3715,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 
 																			<button class="btn btn-default btn-sm" ng-click="Getone(x)">{{x.sale_runno}}</button>
-
 
 																		</td>
 																		<td>{{x.cus_name}}
@@ -4333,10 +3731,8 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																			{{x.saleremark}}
 																		</td>
 
-
 																		<td align="right">{{x.sumsale_num | number}}</td>
 																		<td align="right">{{x.sumsale_price | number}}</td>
-
 
 																		<?php
 																		if ($_SESSION['owner_vat_status'] == '2') {
@@ -4346,8 +3742,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																		<?php
 																		}
 																		?>
-
-
 
 																		<td align="right">{{x.discount_last | number}}</td>
 																		<td align="right">{{ParsefloatFunc(x.sumsale_price) * (ParsefloatFunc(x.vat)/100) + ParsefloatFunc(x.sumsale_price) - x.discount_last | number}}</td>
@@ -4376,17 +3770,10 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																			<button title="<?php echo $lang_sp_123; ?>  {{x.sale_runno}}" class="btn btn-sm btn-danger" ng-click="Deletelist_modal(x)" id="delbut{{x.ID}}">
 																				<?= $lang_delete ?> {{x.sale_runno}}</button>
 
-
-
-
-
-
 																		</td>
 																	</tr>
 																</tbody>
 															</table>
-
-
 															<form class="form-inline">
 																<div class="form-group">
 																	<?= $lang_show ?>
@@ -4414,10 +3801,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 														</div>
 													</div>
 												<?php } ?>
-
-
-
-
 
 
 												</div>
@@ -4472,12 +3855,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														});
 
-
-
-
-
-
-
 														$scope.getpaytype = function() {
 
 															$http.get('<?php echo $base_url; ?>/salesetting/pay_type/get')
@@ -4516,8 +3893,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 																// $scope.Opengetmoneymodal();
 
-
-
 															}
 
 															if (event.keyCode == 27) {
@@ -4531,24 +3906,14 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																	$("body").css("padding-right", "0px");
 																}, 1000);
 
-
-
 															}
-
-
-
 
 															if (event.keyCode == 27) {
 																console.log('esc was pressed');
 
 																$('#Modalcannotfindproduct').modal('hide');
 
-
-
 															}
-
-
-
 
 															if (event.keyCode == 13) {
 																console.log('Enter was pressed');
@@ -4585,9 +3950,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																		$scope.Savesale();
 																	}
 
-
-
-
 																	setTimeout(function() {
 																		if ($scope.printer_ul == '0') {
 																			//$scope.printDivmini();
@@ -4599,16 +3961,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 															}
 
-
-
 														});
-
-
-
-
-
-
-
 
 														<?php
 														if ($_SESSION['owner_vat_status'] == '0' || $_SESSION['owner_vat_status'] == '1') {
@@ -4721,18 +4074,8 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 																}
 
-
-
-
 															});
 														};
-
-
-
-
-
-
-
 
 														$scope.Getnumtoprice_2 = function(x) {
 
@@ -4768,21 +4111,11 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																		$scope.discount_last = discount_numtoprice + parseFloat($scope.discount_last);
 																	}
 
-
-
 																}
-
-
 
 
 															});
 														};
-
-
-
-
-
-
 
 														$scope.Getnumtoprice_3 = function(x) {
 
@@ -4801,15 +4134,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															});
 														};
 
-
-
-
-
-
-
-
-
-
 														$scope.Delproductrank = function() {
 															$('#Delproductrankmodal').modal('show');
 															$scope.getproductlist();
@@ -4826,7 +4150,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															});
 
 														};
-
 
 														$scope.Openshiftmodal = function() {
 
@@ -4928,11 +4251,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 
 														};
-
-
-
-
-
 
 														$scope.Opencashnow = function() {
 
@@ -5042,11 +4360,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														};
 
-
-
-
-
-
 														$scope.Closeshiftnowconfirm = function() {
 
 															if (isNaN($scope.shift_money_end) == true) {
@@ -5060,12 +4373,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																});
 															}
 
-
-
 														};
-
-
-
 
 														$scope.Getpotmodal = function(x, index) {
 
@@ -5078,19 +4386,9 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 																$scope.getproductpotlist = data;
 
-
 															});
 
-
-
-
-
-
 														}
-
-
-
-
 
 														$scope.getcategory = function() {
 
@@ -5234,12 +4532,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 														};
 														$scope.getcashierprinterip();
 
-
-
-
-
-
-
 														$scope.Showproduct_pointmodal = function() {
 															$('#Showproduct_pointmodal').modal('show');
 															$http.get('<?php echo $base_url; ?>/salesetting/Product_point/get')
@@ -5249,15 +4541,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																});
 
 														}
-
-
-
-
-
-
-
-
-
 
 														$scope.Openbillcloseday = function() {
 															$('#Openbillcloseday').modal('show');
@@ -5299,24 +4582,11 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 															});
 
-
-
-
-
-
 															setTimeout(function() {
 																//$scope.printDiv();
 															}, 1000);
 
-
-
 														};
-
-
-
-
-
-
 
 														$scope.Summary_pay_type = function() {
 															var total = 0;
@@ -5332,15 +4602,8 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															return total;
 														};
 
-
-
-
-
-
 														$scope.Openbillclosedayip = function() {
 															$('#Openbillclosedayip').modal('show');
-
-
 
 															$http.post("Salepic/Openbillclosedaylista", {
 																daynow: $scope.daynow,
@@ -5367,8 +4630,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 															});
 
-
-
 															$http.post("Salepic/openbillclosedaylistproduct", {
 																daynow: $scope.daynow,
 															}).success(function(data) {
@@ -5377,22 +4638,10 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 															});
 
-
-
-
-
-
 															setTimeout(function() {
 																$scope.printDiv2ip('billclose');
 															}, 1000);
-
-
-
 														};
-
-
-
-
 
 														$scope.printDiv2ip = function(x) {
 															window.scrollTo(0, 0);
@@ -5447,23 +4696,10 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																	//$('#Openoneminiip').modal('hide');
 																	///  one /////
 
-
-
-
-
-
 																}
 															});
 
-
-
-
 														};
-
-
-
-
-
 
 														$scope.printDivminiip = function() {
 															$('#Openoneminiip').modal('show');
@@ -5475,10 +4711,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														};
 
-
-
-
-
 														$scope.printDivmini = function() {
 															$('#Openonemini').modal('show');
 															$('#Openone').modal('hide');
@@ -5487,20 +4719,12 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														};
 
-
-
 														$scope.printDivmini_order = function() {
 															$('#Openonemini_order').modal('show');
 															$('#Openone').modal('hide');
 															$scope.Getonemini_order($scope.list[0]);
 
-
 														};
-
-
-
-
-
 
 														$scope.printDivminiip2 = function(x) {
 															$('#Openoneminiip').modal('show');
@@ -5512,10 +4736,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														};
 
-
-
-
-
 														$scope.printDivmini2 = function(x) {
 															$('#Openonemini').modal('show');
 															//$('#Openonemini').css('visibility','');
@@ -5526,10 +4746,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															}, 1000);
 
 														};
-
-
-
-
 
 														$scope.Openfull = function() {
 															$('#Openfull').modal({
@@ -5546,15 +4762,12 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															$scope.customerlist = [];
 														};
 
-
 														$scope.getcourse = '0';
 														$scope.Opencourse = function() {
 															$('#Opencustomer').modal('show');
 															$scope.getcourse = '1';
 															$scope.customerlist = [];
 														};
-
-
 
 														$scope.Selectcourse = function(x) {
 															$('#Allcuscourse').modal('show');
@@ -5565,10 +4778,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																$scope.cus_name_course = x.cus_name;
 															});
 														};
-
-
-
-
 														$scope.Savethiscuscourse = function(x) {
 															$http.post("Salepage/Savethiscuscourse", {
 																cus_id: x.cus_id,
@@ -5582,18 +4791,8 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															});
 														};
 
-
-
-
-
-
-
-
-
 														$scope.customer_group_discountpercent = false;
 														$scope.Selectcustomer = function(x) {
-
-
 															$scope.customer_id = x.cus_id;
 															$scope.customer_name = x.cus_name;
 															$scope.customer_score = x.product_score_all;
@@ -5603,9 +4802,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															$('#customer_name').prop('disabled', true);
 															$('#cus_address_all').prop('disabled', true);
 															$scope.search_customer_name = '';
-
-
-
 															$http.post("Salepic/update_customer_group_discountpercent", {
 																customer_group_discountpercent: $scope.customer_group_discountpercent,
 																customer_score: $scope.customer_score,
@@ -5614,14 +4810,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																$scope.Showlistorder();
 
 															});
-
-
-
-
 														};
-
-
-
 
 														// FUNCTION REFRESH ================
 														$scope.Refresh = function() {
@@ -5683,8 +4872,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															}
 
 														};
-
-
 														$scope.Price_discount_percent = function(x, index) {
 															$scope.listsale[index].product_price_discount = (x.product_price * x.product_price_discount_percent) / 100;
 
@@ -5706,7 +4893,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														};
 
-
 														$scope.Addpushproduct = function() {
 															$scope.listsale.push({
 																product_id: '0',
@@ -5719,11 +4905,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																product_price_discount_percent: '0'
 															});
 														};
-
-
-
-
-
 
 														$scope.Savepopup_num = function() {
 															if ($scope.popup_pricenum == '3') {
@@ -5741,7 +4922,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														}
 
-
 														$scope.Savepopup_price = function() {
 															$http.post("Salepage/Savepopup_price", {
 																product_name: $scope.product_name_popupnum,
@@ -5752,13 +4932,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															});
 
 														}
-
-
-
-
-
-
-
 
 														$scope.Addpushproductcode = function(product_code, x) {
 															$scope.yingbarcode = true;
@@ -5816,9 +4989,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																	$scope.sn_code = '';
 																}
 
-
-
-
 																$scope.Findproductone = data.list;
 																data = data.list;
 
@@ -5853,8 +5023,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																			//toastr.warning('<?= $lang_outofstock ?>');
 																		}
 
-
-
 																		if (data[0].count_stock == 0 && parseFloat(data[0].product_stock_num) <= parseFloat(data[0].product_num_min) || parseFloat(data[0].product_stock_num) <= parseFloat($scope.stock_rule.stock_noti)) {
 																			//toastr.info(data[0].product_name + ' <?= $lang_balance ?> '+ data[0].product_stock_num +' <?= $lang_piece ?>');
 																		}
@@ -5863,11 +5031,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																			data[0].product_unit_name = '';
 																		}
 
-
-
 																		$scope.getnumtoprice_product_code = data[0].product_code;
-
-
 
 																		$scope.stock_rule.stock_nosale = parseFloat($scope.stock_rule.stock_nosale);
 																		if (data[0].product_stock_num > $scope.stock_rule.stock_nosale && $scope.cansale == '1') {
@@ -5950,35 +5114,15 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 																			});
 
-
-
-
 																		} else {
 
 																			if (data[0].count_stock == 0 || $scope.cansale == '0') {
 																				toastr.warning('<?php echo $lang_sp_126; ?>');
 																			}
 
-
-
-
-
-
-
-
 																		}
 
-
-
-
-
-
-
 																	}
-
-
-
-
 
 																	$scope.cannotfindproduct = false;
 
@@ -5990,11 +5134,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														};
 
-
-
-
-
-
 														$scope.getname_of_price = function() {
 
 															$http.get('<?php echo $base_url; ?>/salesetting/name_of_price/get')
@@ -6004,8 +5143,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																});
 														};
 														$scope.getname_of_price();
-
-
 
 														// origin =====================
 
@@ -6109,8 +5246,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															});
 														}
 
-
-
 														$scope.orderpass = '';
 														$scope.Deletepush_pass = function(x) {
 															$('#Deleteorder_pass').modal('show');
@@ -6157,11 +5292,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														}
 
-
-
-
-
-
 														$scope.Deletepush = function(x) {
 
 															if (x == 'all') {
@@ -6188,14 +5318,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																	console.log("An error occurred:", error.data);
 
 																});
-
-
-
 														};
-
-
-
-
 
 														$scope.Selectpot = function(x) {
 															if (x.product_ot_price == '0') {
@@ -6239,7 +5362,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														}
 
-
 														$scope.Showlistorder = function(x) {
 
 															$http.post("Salepic/showlistorder", {}).success(function(data) {
@@ -6249,9 +5371,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														};
 														$scope.Showlistorder();
-
-
-
 
 														$scope.Seemorepay = function(x) {
 															$http.post("Salelist/Seemorepay", {
@@ -6267,8 +5386,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															});
 
 														};
-
-
 
 														$scope.morepaykey = '0';
 														$scope.Morepay = function() {
@@ -6327,9 +5444,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															return total;
 														};
 
-
-
-
 														$scope.Modalproduct = function(index) {
 															$('#Modalproduct').modal({
 																show: true
@@ -6348,8 +5462,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 														};
 
-
-
 														$scope.Sumsalenum = function() {
 															var total = 0;
 
@@ -6358,7 +5470,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															});
 															return total;
 														};
-
 
 														$scope.Sumsalediscount = function() {
 															var total = 0;
@@ -6369,7 +5480,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															return total;
 														};
 
-
 														$scope.Sumproduct_score = function() {
 															var total = 0;
 
@@ -6378,9 +5488,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															});
 															return total;
 														};
-
-
-
 
 
 														$scope.digits_count = function(n) {
@@ -6394,10 +5501,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 															return count;
 														}
-
-
-
-
 
 
 														$scope.Sumsaleprice = function() {
@@ -6463,18 +5566,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															return sum;
 														};
 
-
-
-
-
-
-
-
-
-
-
-
-
 														$scope.Sumsalepricevat = function() {
 															var total = 0;
 															angular.forEach($scope.listsale, function(item) {
@@ -6487,9 +5578,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															return $scope.Sumsaleprice();
 
 														};
-
-
-
 
 														$scope.Print_preview_save = function() {
 															$http.post("<?php echo $base_url; ?>/printer/Printercategory/print_preview_save", {
@@ -6507,8 +5595,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 															);
 														};
 														$scope.Print_preview_save();
-
-
 
 
 														$scope.saleremark = '';

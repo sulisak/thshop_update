@@ -267,10 +267,8 @@ if($_SESSION['logoonslip']=='0'){
 
  			<td align="right" ng-if="x.pay_type=='1'" ng-repeat="y in openbillclosedaylistb">
 			{{x.sumsale_price2-y.money_changeto_customer | number:2}}</td>
-			
+
 			<td align="right" ng-if="x.pay_type!='1'">{{x.sumsale_price2 | number:2}}</td>
-			
-			
 		</tr>
 		
 		<tr>
@@ -467,7 +465,7 @@ shift_id: x.shift_id,
 }).success(function(data){
 
 	 $scope.openbillclosedaylist_product = data;
-		// console.log(data);
+		console.log('this is sale reportshift by product list',data);
 
 			});
 // list sale reportshift by product list with wh_product_category ==========
@@ -477,9 +475,9 @@ shift_id: x.shift_id,
 	}).success(function(data){
 
      $scope.openbillclosedaylista = data;
-					// console.log(data);
+					console.log('this is sale reportshift by product list with wh_product_category',data);
 
-        });
+   });
 // end list sale reportshift by product list with wh_product_category ==========
 
 // sale header report shift =========
@@ -488,20 +486,22 @@ shift_id: x.shift_id,
 	}).success(function(data){
 
      $scope.openbillclosedaylistb = data;
-					console.log(data);
+					console.log('this is calculate  sale header report shift',data);
 
         });
 // end sale header report shift =========
 
+// calcalate about morepay table
 	$http.post("Salereportshift/Openbillclosedaylistc",{
 	shift_id: x.shift_id,
 	}).success(function(data){
 
      $scope.openbillclosedaylistc = data;
+					console.log('this is amount from morepay',data);
 
         });
 
-
+// end calcalate about morepay table
 
 
 
