@@ -24,7 +24,14 @@ foreach ($Getpermission_rule as $value) {
 			}
 			?>
 </style>
+<!-- add new to handle image processing slow -->
 
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+
+</head>
+<!-- add new to handle image processing slow -->
 <audio id="play" src="<?php echo $base_url; ?>/sound/beep.wav"></audio>
 
 <div class="lodingbefor" ng-app="firstapp" ng-controller="Index" style="display: none;">
@@ -147,10 +154,10 @@ foreach ($Getpermission_rule as $value) {
 
 
 						<center>
-							<img ng-if="x.product_image !=''" ng-src="<?php echo $base_url; ?>/{{x.product_image}}" class="img img-responsive" style="height: 145px;" title="{{x.product_name}}  {{x.product_des}}">
-							<!-- <img ng-if="x.product_image != ''" ng-src="<?php echo $base_url; ?>/resize_image.php?image={{x.product_image}}" class="img img-responsive" style="height: 145px;" title="{{x.product_name}} {{x.product_des}}"> -->
-							<!-- <img ng-if="x.product_image ==''" ng-src="<?php echo $base_url; ?>/pic/df.png" class="img img-responsive" style="height: 150px;" title="{{x.product_name}}"> -->
-
+							<!-- product image zone -->
+							<!-- <img ng-if="x.product_image !=''" ng-src="<?php echo $base_url; ?>/{{x.product_image}}" class="img img-responsive" 
+							style="height: 145px;" title="{{x.product_name}}  {{x.product_des}}">
+						
 							<div ng-if="x.product_image == ''" style="font-size:30px;font-weight:bold;height:140px;line-height: 140px;">
 								<p style="line-height: 1.3;display: inline-block;vertical-align: middle;">{{x.product_name}} </p>
 							</div>
@@ -158,8 +165,26 @@ foreach ($Getpermission_rule as $value) {
 
 							<p></p>
 
-							<span ng-if="x.product_image != ''" style="font-weight:bold;">{{x.product_name | limitTo:25}}</span>
+							<span ng-if="x.product_image != ''" style="font-weight:bold;">{{x.product_name | limitTo:25}}</span> -->
+							<!-- product image zone -->
+							<!-- product image zone -->
 
+
+							<!-- Include the 'productPic' module in your AngularJS app -->
+
+
+							<!-- Use the 'productPic' module in your AngularJS app -->
+
+							<img ng-if="x.product_image !== ''" ng-src="{{ placeholderImage }}" class="img img-responsive" style="height: 145px;" title="{{ x.product_name }} {{ x.product_des }}" data-src="{{ getLazyImageSource(x.product_image) }}">
+
+							<div ng-if="x.product_image === ''" style="font-size: 30px; font-weight: bold; height: 140px; line-height: 140px;">
+								<p style="line-height: 1.3; display: inline-block; vertical-align: middle;">{{ x.product_name }}</p>
+							</div>
+							<p></p>
+							<span ng-if="x.product_image !== ''" style="font-weight: bold;">{{ x.product_name | limitTo:25 }}</span>
+
+
+							<!-- product image zone -->
 							<br />
 
 							<div ng-if="x.product_price_discount==0.00" style="color: red;font-weight: bold;">
@@ -2328,7 +2353,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 
 												<tr ng-repeat="x in openbillclosedaylistb">
 													<td width="200px;">
-													ຍອດຂາຍ</td>
+														ຍອດຂາຍ</td>
 													<td align="right">{{x.sumsale_price2 | number}}</td>
 												</tr>
 
@@ -3842,6 +3867,35 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 														$scope.ParsefloatFunc = function(data) {
 															return parseFloat(data);
 														};
+
+														// add new for image process running slowly =====================
+														$scope.base_url = '<?php echo $base_url; ?>'; // Set the base URL
+
+														$scope.getLazyImageSource = function(productImage) {
+															console.log('this is base url productimage....', $scope.base_url + '/' + productImage)
+															return $scope.base_url + '/' + productImage;
+														};
+														// Function to handle lazy loading
+														$scope.lazyLoadImages = function() {
+
+															console.log('this is lazy load image....')
+															var lazyImages = document.querySelectorAll('img[data-src]');
+															for (var i = 0; i < lazyImages.length; i++) {
+																if (lazyImages[i].getBoundingClientRect().top <= window.innerHeight) {
+																	lazyImages[i].src = lazyImages[i].getAttribute('data-src');
+																	lazyImages[i].removeAttribute('data-src');
+
+																}
+															}
+														};
+
+														// Call lazyLoadImages when the page finishes loading
+														window.addEventListener('load', $scope.lazyLoadImages);
+														console.log('===>',window.addEventListener('load', $scope.lazyLoadImages));
+														// Call lazyLoadImages when the page is scrolled
+														window.addEventListener('scroll', $scope.lazyLoadImages);
+
+															// add new for image process running slowly =====================
 
 
 														$scope.saledate = '';
@@ -5872,7 +5926,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>" s
 																	$('#savesale2').prop('disabled', false);
 																	$('#money_from_customer').prop('disabled', false);
 																	$('#money_from_customer2').prop('disabled', false);
-																	console.log($scope.listsale);
+																	console.log('this is save list quotation details..', $scope.listsale);
 																	$scope.Refresh();
 																	$scope.getlist();
 
