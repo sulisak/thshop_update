@@ -3,6 +3,14 @@ foreach ($Getpermission_rule as $value) {
  $arr =  json_decode($value['permission_rule']);
 }
 ?>
+<head>
+	<!-- cdnjs -->
+	<!-- <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script> -->
+	<script src="<?= $base_url ?>/js/jquery.lazy.min.js"></script>
+	<script src="<?= $base_url ?>/js/jquery.lazy.plugins.min.js"></script>
+
+</head>
 <div class="col-md-10 col-sm-9" ng-app="firstapp" ng-controller="Index">
 
 <div class="panel panel-default">
@@ -145,7 +153,7 @@ if($_SESSION['user_type']==4 || $_SESSION['user_type']==3 ) // this one let admi
 <td align="center">
 	<span ng-if="x.product_image!=''">
 	<center>
-<img ng-src="<?php echo $base_url;?>/{{x.product_image}}" width="70px" height="70px;">
+<img src="<?php echo $base_url;?>/{{x.product_image}}" class="img img-responsive lazy" width="70px" height="70px;">
 <br />
 <button class="btn btn-default btn-xs" ng-click="No_product_image(x)">
 	<?php echo $lang_pl_15;?> </button>
@@ -153,7 +161,32 @@ if($_SESSION['user_type']==4 || $_SESSION['user_type']==3 ) // this one let admi
 </center>
 </span>
 			</td>
+			<script>
+								window.onscroll = function() {
+									lazyload();
 
+								}
+								function lazyload() {
+
+									var lazyImage = document.getElementsByClassName('lazy');
+									for (var i = 0; i < lazyImage.length; i++) {
+										if (elementInViewport(lazyImage[i])) {
+											lazyImage[i].setAttribute('src', lazyImage[i].getAttribute('src'));
+										}
+										console.log("lazyload is working...");
+									}
+								}
+
+								function elementInViewport(el) {
+									var rect = el.getBoundingClientRect();
+									return (
+										rect.top >= 0 &&
+										rect.left >= 0 &&
+										rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+										rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+									);
+								}
+							</script>
 			<td>
 			<b style="font-size:18px;">{{x.product_name}}
 				
