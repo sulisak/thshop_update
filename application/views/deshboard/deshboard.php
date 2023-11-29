@@ -1,7 +1,7 @@
 <?php
 
 date_default_timezone_set('Asia/Bangkok');
-$date_expire='2023-11-29';
+$date_expire='2024-11-29';
 $datenow=date("Y-m-d ",time()); 
 
 
