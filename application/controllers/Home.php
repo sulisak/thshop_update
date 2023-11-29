@@ -236,7 +236,7 @@ $query = $this->db->query('SELECT
 	$data['show_pricepernum'] = $row->show_pricepernum;
 } 
  
-$data['title'] = 'จอลูกค้า';
+$data['title'] = 'ຈໍລູກຄ້າ';
 $this->showcuslayout('webbody/showcus2mer',$data);
 
 

@@ -1698,7 +1698,7 @@ $data['lang_pl_50_a4'] = 'หมายเหตุ  สำหรับช่อ�
 
 
 
-$data['lang_omgname'] = 'C2MPOS';
+$data['lang_omgname'] = 'POS SYSTEM';
 
 
 

@@ -27,7 +27,7 @@ class Login extends MY_Controller {
 	 */
 	public function index()
 	{
-		$data['title'] = 'C2MPOS';
+		$data['title'] = 'POS SYSTEM LOGIN';
 		$data['getlogo'] = $this->home_model->Getlogo();
 		$this->weblayout('webbody/login',$data);
 	}
