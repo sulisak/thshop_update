@@ -27,7 +27,7 @@
 
 
 
-<link href="<?php echo $base_url;?>/pic/icon.png" rel="shortcut icon" type="image/x-icon" />
+<link href="<?php echo $base_url;?>/pic/iconn.png" rel="shortcut icon" type="image/x-icon" />
 
 	<title><?php echo $_SESSION['branch_name']; ?></title>
 </head>
