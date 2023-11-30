@@ -861,7 +861,7 @@ FROM sale_list_datail as sd
           ');
 
     //delete all from showcus2mer
-    $this->db->query('DELETE FROM sale_list_cus2mer WHERE user_id="' . $_SESSION['user_id'] . '"');
+    $this->db->query('DELETE FROM sale_list_cus2mer WHERE user_id="'.$_SESSION['user_id'].'"');
     // $this->db->query('update sale_list_cus2mer set sale_status="1" WHERE user_id="' . $_SESSION['user_id'] . '"');
 
 
@@ -943,7 +943,7 @@ FROM sale_list_datail as sd
 
     $this->db->insert("quotation_list_datail", $data);
 
-    $query = $this->db->query('DELETE FROM sale_list_cus2mer  WHERE sc_ID="' . $data['sc_ID'] . '"'); //delete all from showcus2mer
+    $query = $this->db->query('DELETE FROM sale_list_cus2mer  WHERE sc_ID="'.$data['sc_ID'].'"'); //delete all from showcus2mer
     // $query = $this->db->query('update  sale_list_cus2mer set status="1" WHERE sc_ID="' . $data['sc_ID'] . '"'); //delete all from showcus2mer
 
 
@@ -980,7 +980,7 @@ FROM sale_list_datail as sd
 
     $this->db->insert("quotation_list_header", $data2);
 
-    $this->db->query('DELETE FROM sale_list_cus2mer WHERE user_id="' . $_SESSION['user_id'] . '"');
+    $this->db->query('DELETE FROM sale_list_cus2mer WHERE user_id="'.$_SESSION['user_id'].'"');
     // $this->db->query('update sale_list_cus2mer set status="1" WHERE user_id="' . $_SESSION['user_id'] . '"');
   }
 
@@ -1283,6 +1283,25 @@ FROM sale_list_header as sh
 
     return $json;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   public function Getquotation($data)
   {
@@ -1668,19 +1687,19 @@ WHERE uo.user_password="' . $data['orderpass'] . '" LIMIT 1');
 
 
         // if ($data['product_name'] == '') {
-        $this->db->query('SELECT *,"' . $arr_name . '","' . time() . '","' . $_SESSION['name'] . '","' . $_SESSION['shift_id'] . '"
+          $this->db->query('SELECT *,"' . $arr_name . '","' . time() . '","' . $_SESSION['name'] . '","' . $_SESSION['shift_id'] . '"
 FROM sale_list_cus2mer
 WHERE user_id="' . $_SESSION['user_id'] . '"');
-        $this->db->query('DELETE FROM sale_list_cus2mer  WHERE user_id="' . $_SESSION['user_id'] . '"');
-        // $this->db->query('UPDATE sale_list_cus2mer set sale_status="1" WHERE user_id="' . $_SESSION['user_id'] . '" and sale_status="0"');
+          $this->db->query('DELETE FROM sale_list_cus2mer  WHERE user_id="' . $_SESSION['user_id'] . '"');
+          // $this->db->query('UPDATE sale_list_cus2mer set sale_status="1" WHERE user_id="' . $_SESSION['user_id'] . '" and sale_status="0"');
         // } 
-
+        
         // else {
-        $this->db->query('SELECT *,"' . $arr_name . '","' . time() . '","' . $_SESSION['name'] . '","' . $_SESSION['shift_id'] . '"
+          $this->db->query('SELECT *,"' . $arr_name . '","' . time() . '","' . $_SESSION['name'] . '","' . $_SESSION['shift_id'] . '"
 FROM sale_list_cus2mer
 WHERE product_name="' . $data['product_name'] . '" and  user_id="' . $_SESSION['user_id'] . '"');
-        $this->db->query('DELETE FROM sale_list_cus2mer  WHERE product_name="' . $data['product_name'] . '" AND user_id="' . $_SESSION['user_id'] . '"');
-        // $this->db->query('UPDATE sale_list_cus2mer set sale_status="1" WHERE product_name="' . $data['product_name'] . '" AND user_id="' . $_SESSION['user_id'] . '" and sale_status="0"');
+          $this->db->query('DELETE FROM sale_list_cus2mer  WHERE product_name="' . $data['product_name'] . '" AND user_id="' . $_SESSION['user_id'] . '"');
+          // $this->db->query('UPDATE sale_list_cus2mer set sale_status="1" WHERE product_name="' . $data['product_name'] . '" AND user_id="' . $_SESSION['user_id'] . '" and sale_status="0"');
         // }
       } else {
         return 'no';
