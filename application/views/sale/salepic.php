@@ -10,6 +10,27 @@ foreach ($Getpermission_rule as $value) {
 
 }
 
+.div td,
+.div tr,
+.div table,
+.div th,
+.div tbody,
+.div thead {
+    font-family: "Phetsarath OT" !important;
+}
+
+.panel-body {
+    font-family: "Phetsarath OT" !important;
+}
+
+.text-right {
+    text-align: right;
+}
+
+* {
+    font-family: "Phetsarath OT" !important;
+}
+
 <?php if ($_SESSION['printer_type']=='1') {
     $pt_width='380px';
 }
@@ -86,6 +107,10 @@ else {
 
                 </div>
                 <?php } ?>
+
+
+
+
 
                 <form class="form-inline" style="float: right;">
 
@@ -210,7 +235,7 @@ else {
                             <!-- Use the 'productPic' module in your AngularJS app -->
 
                             <img ng-if="x.product_image !== ''" src="<?php echo $base_url; ?>/{{x.product_image}}"
-                                class="img img-responsive lazy" style="height: 145px;"
+                                class="img img-responsive" style="height: 145px;"
                                 title="{{ x.product_name }} {{ x.product_des }}">
 
                             <div ng-if="x.product_image === ''"
@@ -222,22 +247,6 @@ else {
                             <span ng-if="x.product_image !== ''"
                                 style="font-weight: bold;">{{ x.product_name | limitTo:25 }}</span>
                             <script>
-                            window.onscroll = function() {
-                                lazyload();
-
-                            }
-
-                            function lazyload() {
-
-                                var lazyImage = document.getElementsByClassName('lazy');
-                                for (var i = 0; i < lazyImage.length; i++) {
-                                    if (elementInViewport(lazyImage[i])) {
-                                        lazyImage[i].setAttribute('src', lazyImage[i].getAttribute('src'));
-                                    }
-                                    console.log("lazyload is working...");
-                                }
-                            }
-
                             function elementInViewport(el) {
                                 var rect = el.getBoundingClientRect();
                                 return (
@@ -4274,26 +4283,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>"
                 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div class="modal fade" id="Modalgetnumtoprice_noti">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -4900,37 +4889,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>"
                                     $scope.ParsefloatFunc = function(data) {
                                         return parseFloat(data);
                                     };
-
-                                    // add new for image process running slowly =====================
-                                    $scope.base_url = '<?php echo $base_url; ?>'; // Set the base URL
-
-                                    $scope.getLazyImageSource = function(productImage) {
-                                        console.log('this is getLazyImageSource ....', $scope.base_url +
-                                            '/' + productImage)
-                                        return $scope.base_url + '/' + productImage;
-                                    };
-                                    // Function to handle lazy loading
-                                    $scope.lazyLoadImages = function() {
-
-                                        console.log('this is lazy load image....')
-                                        var lazyImages = document.querySelectorAll('img[data-src]');
-                                        for (var i = 0; i < lazyImages.length; i++) {
-                                            if (lazyImages[i].getBoundingClientRect().top <= window
-                                                .innerHeight) {
-                                                lazyImages[i].src = lazyImages[i].getAttribute('data-src');
-                                                lazyImages[i].removeAttribute('data-src');
-
-                                            }
-                                        }
-                                    };
-
-                                    // Call lazyLoadImages when the page finishes loading
-                                    window.addEventListener('load', $scope.lazyLoadImages);
-                                    console.log('===>', window.addEventListener('load', $scope.lazyLoadImages));
-                                    // Call lazyLoadImages when the page is scrolled
-                                    window.addEventListener('scroll', $scope.lazyLoadImages);
-
-                                    // add new for image process running slowly =====================
 
 
                                     $scope.saledate = '';
