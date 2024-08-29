@@ -293,21 +293,9 @@ $this->salepage_model->Updateproductdeletestock($data['listsale'][$i-1]);
 
 
 
-
-
-
-
-
-
 }
 
 }
-
-
-
-
-
-
 
 
 $newdata = array(
