@@ -1139,7 +1139,7 @@ SET money_change_showcus="0.01" WHERE owner_id="' . $_SESSION['owner_id'] . '"')
 
       $query = $this->db->query('UPDATE wh_product_list
     SET product_stock_num=product_stock_num - ' . $data2['product_sale_num'] . '
-    WHERE product_id="' . $data2['product_id'] . '" and  owner_id="' . $_SESSION['owner_id'] . '" and branch_id="' . $_SESSION['branch_id'] . '"');
+    WHERE product_id="' . $data2['product_id'] . '" and  owner_id="' . $_SESSION['owner_id'] . '"');
       return true;
       // ===== add new 06-04-2022 ===============================
 

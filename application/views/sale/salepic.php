@@ -54,8 +54,7 @@ else {
     <!-- cdnjs -->
     <!-- <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script> -->
-    <script src="<?=$base_url?>/js/jquery.lazy.min.js"></script>
-    <script src="<?=$base_url?>/js/jquery.lazy.plugins.min.js"></script>
+
 
 </head>
 
@@ -7226,14 +7225,15 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>"
                                                 saledate: $scope.saledate,
                                                 discount_last: $scope.discount_last,
                                                 shift_id: '<?php if (isset($_SESSION['shift_id'])) {
-																													echo $_SESSION['shift_id'];
-																												} ?>'
+                                                    echo $_SESSION['shift_id'];
+                                                } ?>'
                                             }).success(function(data) {
-                                                //toastr.success('<?= $lang_success ?>');
+                                                toastr.success('<?= $lang_success ?>');
 
 
                                                 //Line notify
-                                                <?php if ($_SESSION['line_stocknoti'] == '1') { ?>
+                                                <?php if 
+                                                    ($_SESSION['line_stocknoti'] == '1') { ?>
                                                 $http.post("Salepage/line_stocknoti", {
                                                     listsale: $scope.listsale
                                                 }).success(function(data) {
@@ -7585,9 +7585,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>"
                                                 $scope.printDivmini();
                                             }
 
-                                        }).catch(function(error) {
-                                            console.error('An error occurred:', error);
-                                            // Handle the error here
                                         });
 
                                     };
@@ -7631,8 +7628,6 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>"
                                         setTimeout(function() {
                                             //$('#Openone').modal('hide');
                                         }, 1000);
-
-
                                     };
                                     //start ค้นหาสินค้าทั้งหมด
                                     $scope.searchtextarray = [];
