@@ -279,9 +279,26 @@ if ($this->db->update("owner", $newdata)){
 
 
   }
+
+//   add new for delete branch ===============================
+public function Delete($data)
+{
+
+      $data['branch_id'] = $_SESSION['branch_id'];
+      $data['branch_name'] = $_SESSION['branch_name'];
+//       $data['name'] = $_SESSION['name'];
+    
+      $this->db->query('DELETE FROM branch  
+WHERE branch_id="' . $data['branch_id'] . '"');
+return true;
+
+//       $this->db->insert("log_delete_product", $data);
+//       $query = $this->db->query('DELETE FROM wh_product_list  WHERE product_id="' . $data['product_id'] . '" and  owner_id="' . $_SESSION['owner_id'] . '"');
+//       return true;
+}
+//   add new for delete branch ===============================
   
-  
-  
+
 
 
 }

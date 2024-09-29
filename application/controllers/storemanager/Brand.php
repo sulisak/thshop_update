@@ -250,6 +250,27 @@ $this->store_brand_model->Savecolortheme($_POST['color_theme']);
 header( "location: ".$_SERVER["HTTP_REFERER"]);
 }
 
+// add new to delete branch ==========================================
+
+function Delete()
+	{
+
+$data = json_decode(file_get_contents("php://input"),true);
+if(!isset($data)){
+exit();
+}
+
+
+$success = $this->store_brand_model->Delete($data);
+	if($success){
+		return true;
+	}else{
+		return false;
+	}
+
+}
+// add new to delete branch =============================================
+
 
 
 

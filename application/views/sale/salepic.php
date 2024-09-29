@@ -7228,7 +7228,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>"
                                                     echo $_SESSION['shift_id'];
                                                 } ?>'
                                             }).success(function(data) {
-                                                toastr.success('<?= $lang_success ?>');
+                                                toastr.success('<?= $lang_savingsuccess ?>');
 
 
                                                 //Line notify
@@ -7272,7 +7272,7 @@ pregetlistcus()" class="form-control" placeholder="<?php echo $lang_sp_42; ?>"
 
                                                 $('#Opengetmoneymodal').modal('hide');
 
-                                                toastr.success('<?= $lang_savingsuccess ?>');
+                                                //  toastr.success('<?= $lang_savingsuccess ?>');
 
 
                                                 $scope.changemoney = $scope.money_from_customer - (
