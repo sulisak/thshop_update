@@ -122,7 +122,14 @@ placeholder="<?=$lang_search?> <?php echo $lang_imsn_6;?>" style="width: 300px;"
 			<td align="center">{{x.adddate}}</td>
 			<td align="center">{{x.branch_name}}</td>
 			<td ng-show="showdeletcbut" align="center">
-			<button class="btn btn-xs btn-danger" ng-if="x.confirm=='0'" ng-click="Deleteimportlist(x)" id="delbut{{x.importproduct_header_id}}"><?=$lang_delete?></button></td>
+			       <!-- origin -->
+			<!-- <button class="btn btn-xs btn-danger" ng-if="x.confirm=='0'" ng-click="Deleteimportlist(x)" id="delbut{{x.importproduct_header_id}}"><?=$lang_delete?></button> -->
+			<!-- origin -->
+			 <!-- dev -->
+			<button class="btn btn-xs btn-danger" ng-click="Deleteimportlist(x)" id="delbut{{x.importproduct_header_id}}"><?=$lang_delete?></button>
+			 <!-- dev -->
+		
+		</td>
 		</tr>
 	</tbody>
 </table>
